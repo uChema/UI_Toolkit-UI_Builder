@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:Foldout text="Wind" name="Wind">
+        <Style src="WindComponent.uss" />
+        <uie:Vector4Field label="Wind Direction" name="WindDirection" style="height: 18px;&#10;width: 390px;&#10;" />
+        <uie:FloatField label="Wind Scale" value="42.2" name="WindScale" />
+        <ui:VisualElement name="WinStrengthHolder" style="height: 45.66666px;&#10;width: 100%;&#10;flex-direction: row;&#10;flex-wrap: wrap;&#10;">
+            <ui:MinMaxSlider picking-mode="Ignore" label="WindStrength" min-value="10" max-value="12" low-limit="-10" high-limit="40" name="WindStrength" style="height: 17px;&#10;width: 100%;&#10;" />
+            <ui:Label text=" " name="Space" style="width: 30%;&#10;" />
+            <ui:Label text="Min Value :" name="MinValue" style="width: 35%;&#10;" />
+            <ui:Label text="Max Value :" name="MaxValue" style="width: 35%;&#10;" />
+        </ui:VisualElement>
+        <uie:FloatField label="Wind Speed" value="42.2" name="WindSpeed" />
+    </ui:Foldout>
+</ui:UXML>

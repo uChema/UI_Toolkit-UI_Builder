@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="Buttons" style="flex-direction: row;&#10;justify-content: center;&#10;margin-top: 10px;&#10;">
+        <Style src="ButtonComponent.uss" />
+        <ui:Button text="Save" name="SaveButton" class="button" />
+        <ui:Button text="Reset" name="ResetButton" class="button" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,71 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:Template name="GradientEditor" src="GradientEditor.uxml" />
+    <ui:Template name="WindComponent" src="WindComponent.uxml" />
+    <ui:Template name="ButtonComponent" src="ButtonComponent.uxml" />
+    <ui:VisualElement name="Container" style="width: 100%;&#10;height: 100%;&#10;">
+        <Style src="ArtistTool.uss" />
+        <ui:ScrollView name="ScrollContainer">
+            <ui:VisualElement name="TimedElements">
+                <ui:Label text="Timed Elements" name="Title" class="Title" />
+                <ui:Slider label="Time" value="42" high-value="1" name="Time" binding-path="time" style="margin: 20px;&#10;margin-left: 0;&#10;margin-right: 0;&#10;margin-top: 0;&#10;margin-bottom: 0;&#10;" />
+                <ui:Foldout text="Gradient" name="Gradients">
+                    <ui:Instance template="GradientEditor" name="SkyGradient" />
+                    <ui:Instance template="GradientEditor" name="RuinsGradient" />
+                    <ui:Instance template="GradientEditor" name="TreesGradient" />
+                    <ui:Instance template="GradientEditor" name="RimColor" />
+                </ui:Foldout>
+                <ui:Foldout text="Lights" name="Lights">
+                    <ui:VisualElement name="Sunlight" class="Lights">
+                        <ui:Label text="Sunlight" name="LightTitle" />
+                        <ui:Instance template="GradientEditor" name="LightGradient" />
+                        <uie:ObjectField label="Sprite" name="Sprite" style="display: none;&#10;visibility: hidden;&#10;" />
+                        <uie:FloatField label="Intensity" value="42.2" name="Intensity" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="GrassLight" class="Lights">
+                        <ui:Label text="Grass Light" name="LightTitle" />
+                        <uie:FloatField label="Intensity" value="42.2" name="Intensity" binding-path="m_Intensity" />
+                        <ui:Instance template="GradientEditor" name="LightGradient" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="CaveHoleLight" class="Lights">
+                        <ui:Label text="Cave Hole Light" name="LightTitle" style="height: 16px;&#10;" />
+                        <uie:FloatField label="Falloff" value="42.2" name="Falloff" binding-path="m_ShapeLightFalloffSize" />
+                        <ui:Slider picking-mode="Ignore" label="FalloffIntensity" value="42" high-value="1" name="FalloffIntencity" binding-path="m_FalloffIntensity">
+                            <uie:FloatField value="42.2" name="CurrentValue" />
+                        </ui:Slider>
+                    </ui:VisualElement>
+                </ui:Foldout>
+            </ui:VisualElement>
+            <ui:VisualElement name="ConstantElement">
+                <ui:Label text="Constant Elements" name="Title" class="Title" />
+                <ui:Instance template="WindComponent" name="Wind" />
+                <ui:Foldout text="Postprocessing" name="Postprocessing">
+                    <ui:VisualElement name="WhiteBalance" class="Lights">
+                        <ui:Label text="White Balance" name="Title" />
+                        <ui:VisualElement name="Temperature">
+                            <ui:Slider label="Temperature" value="0" high-value="100" name="SliderValue" low-value="-100" binding-path="temperature">
+                                <uie:FloatField value="42.2" name="CurrentValue" class="CurrentValue" />
+                            </ui:Slider>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Tint">
+                            <ui:Slider picking-mode="Ignore" label="Tint" value="0" high-value="100" name="SliderValue" low-value="-100">
+                                <uie:FloatField value="42.2" name="CurrentValue" class="CurrentValue" />
+                            </ui:Slider>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Bloom" class="Lights">
+                        <ui:Label text="Bloom" name="Title2" class="subTitle" />
+                        <uie:FloatField label="Intensity" value="42.2" name="Intensity" binding-path="intensity" />
+                        <uie:ColorField label="Tint" value="RGBA(0.000, 1.000, 1.000, 1.000)" name="Tint" binding-path="tint" />
+                    </ui:VisualElement>
+                </ui:Foldout>
+                <ui:Foldout text="VFX" name="VFX">
+                    <ui:Label text="Glow Particles" name="Title" />
+                    <uie:FloatField label="Emission" value="42.2" name="Emission" />
+                    <uie:EnumField label="Render Mode" value="Center" name="RenderMode" />
+                    <uie:ObjectField label="Render Material" name="Material" />
+                </ui:Foldout>
+            </ui:VisualElement>
+            <ui:Instance template="ButtonComponent" name="Buttons" />
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>

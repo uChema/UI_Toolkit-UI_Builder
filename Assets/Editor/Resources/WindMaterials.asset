@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 516b5fce18db74e019252dc7aa7ff1b6, type: 3}
+  m_Name: WindMaterials
+  m_EditorClassIdentifier: 
+  WindMaterials:
+  - {fileID: 2100000, guid: 4fc2f8cfd74c87b4da2dcbbc49aec48c, type: 2}
+  - {fileID: 2100000, guid: ccd3148894e567642ad80a9dfc9e2079, type: 2}
+  - {fileID: 2100000, guid: e9f62bfe680090b448c01276afd3e4ab, type: 2}
+  - {fileID: 2100000, guid: ed7614cf3136a984d9038477ffbaf17d, type: 2}
+  - {fileID: 2100000, guid: a9b81708ab0750149b5fd8ed7914a2c9, type: 2}
+  - {fileID: 2100000, guid: be0a5637d1e193447b3756694330cbc4, type: 2}

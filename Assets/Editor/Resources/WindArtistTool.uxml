@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:Template name="WindComponent" src="WindComponent.uxml" />
+    <ui:Template name="ButtonComponent" src="ButtonComponent.uxml" />
+    <ui:Instance template="WindComponent" name="Wind" />
+    <ui:Instance template="ButtonComponent" name="Buttons" />
+</ui:UXML>
